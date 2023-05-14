@@ -1,0 +1,36 @@
+# Node.js
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor
+.vscode/
+.idea/
+
+# Dependency directories
+/dist/
+/tmp/
+/cache/
+/out/
+/public/
+
+# Sequelize
+migrations/
+seeders/
+
+# Environment variables
+.env
+.env.local
+.env.test
+.env.*.local
+!*.conf
+
+# Build files
+build/
+out/
+*.out
