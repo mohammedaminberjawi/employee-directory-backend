@@ -72,9 +72,20 @@ const createEmployee = async (req, res) => {
     }
 }
 
+const updateEmployee = async (req, res) => {
+    const employee = await Employee.findByPk(req.params.id);
+    if (!employee) {
+        res.sendStatus(404);
+    } else {
+        await employee.update(prepareEmployeeData(req));
+        res.json(employee);
+    }
+}
+
 module.exports = {
     getAllEmployee,
     getEmployeeByPrimaryKey,
     createEmployee,
+    updateEmployee,
     uploadSingle
 }
