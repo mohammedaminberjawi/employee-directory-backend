@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  mysqldb:
+    image: mysql:8.0
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - MYSQL_ROOT_PASSWORD=$DB_PASSWORD
+      - MYSQL_DATABASE=$DB_NAME
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+
+volumes:
+  db:
