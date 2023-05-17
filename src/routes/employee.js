@@ -1,6 +1,6 @@
 const express = require('express');
 
-const {getAllEmployee, getEmployeeByPrimaryKey, createEmployee, updateEmployee, uploadSingle} = require("../controllers/employeeController");
+const {getAllEmployee, getEmployeeByPrimaryKey, createEmployee, updateEmployee, deleteEmployee, uploadSingle} = require("../controllers/employeeController");
 
 const EmployeeRouter = express.Router();
 
@@ -11,5 +11,7 @@ EmployeeRouter.get('/:id', getEmployeeByPrimaryKey);
 EmployeeRouter.post('/' , uploadSingle, createEmployee);
 
 EmployeeRouter.put('/:id', uploadSingle, updateEmployee);
+
+EmployeeRouter.delete('/:id', deleteEmployee);
 
 module.exports = EmployeeRouter;

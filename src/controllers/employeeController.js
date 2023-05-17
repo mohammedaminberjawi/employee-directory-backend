@@ -82,10 +82,21 @@ const updateEmployee = async (req, res) => {
     }
 }
 
+const deleteEmployee = async (req, res) => {
+    const employee = await Employee.findByPk(req.params.id);
+    if (!employee) {
+        res.sendStatus(404);
+    } else {
+        await employee.destroy();
+        res.sendStatus(204);
+    }
+}
+
 module.exports = {
     getAllEmployee,
     getEmployeeByPrimaryKey,
     createEmployee,
     updateEmployee,
+    deleteEmployee,
     uploadSingle
 }
