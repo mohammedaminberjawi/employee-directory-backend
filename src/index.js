@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 app.use('/api/employees', EmployeeRouter);
 
-app.use('/Images', express.static('./Images'));
+app.use('/images', express.static('./images'));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
