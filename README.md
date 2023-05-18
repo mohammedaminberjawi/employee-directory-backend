@@ -1,5 +1,5 @@
 # employee-directory-backend
-A basic employee directory backend server using ExpressJs, Sequelize and SQL
+A basic employee directory backend server using ExpressJs, Sequelize and MySQL
 
 ## Installation and Setup
 
@@ -21,12 +21,12 @@ npm install
   2. Copy environment variables from **.env.example** to **.env**
 
 ### 3. Run the app
-To start the db run:
+To run DB:
 ```
 npm run docker:start
 ```
 
-To start the server run:
+To run the server:
 ```
 npm start
 ```
