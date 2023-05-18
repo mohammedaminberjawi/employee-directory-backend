@@ -9,7 +9,9 @@
     "restart": "docker-compose restart",
     "stop": "docker-compose down",
     "docker:start": "docker-compose up -d",
-    "status": "docker-compose ps"
+    "status": "docker-compose ps",
+    "lint": "eslint .  --ext .js",
+    "lint-fix": "eslint --fix .  --ext .js"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +27,9 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "nodemon": "^2.0.22",
+    "prettier": "2.8.8"
   }
 }
